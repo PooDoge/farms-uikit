@@ -2124,11 +2124,11 @@ var links = [
         items: [
             {
                 label: "Exchange",
-                href: "https://exchange.pancakeswap.finance",
+                href: "https://dogeshrek.com",
             },
             {
                 label: "Liquidity",
-                href: "https://exchange.pancakeswap.finance/#/pool",
+                href: "https://dogeshrek.com/#/pool",
             },
         ],
     },
@@ -2228,29 +2228,24 @@ var links = [
 ];
 var socials = [
     {
-        label: "Twitter",
-        icon: "TwitterIcon",
-        href: "https://twitter.com/CashCowProtocol",
-    },
-    {
         label: "Telegram",
         icon: "TelegramIcon",
         items: [
             {
-                label: "English",
-                href: "https://t.me/cashcowprotocol",
+                label: "TG Chat",
+                href: "https://t.me/dogeshrekchat",
             },
             {
-                label: "Spanish",
-                href: "https://t.me/cashcowprotocol_es",
+                label: "Channel",
+                href: "https://t.me/dogeshrek",
             },
         ],
     },
     {
-        label: "Discord",
-        icon: "DiscordIcon",
-        href: "https://discord.gg/3kFU9vCjs7",
-      },
+        label: "Twitter",
+        icon: "TwitterIcon",
+        href: "https://twitter.com/dogeshrek",
+    },
 ];
 var MENU_HEIGHT = 64;
 var MENU_ENTRY_HEIGHT = 48;
@@ -2829,9 +2824,9 @@ var templateObject_1$K;
 
 var baseColors = {
     failure: "#ED4B9A",
-    primary: "#7645D9",
-    primaryBright: "#7645D9",
-    primaryDark: "#7645D9",
+    primary: "#361B72",
+    primaryBright: "#aa8929",
+    primaryDark: "#aa8929",
     secondary: "#7645D9",
     success: "#31D0AA",
     warning: "#FFB237",

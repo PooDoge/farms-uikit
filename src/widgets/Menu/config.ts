@@ -10,11 +10,11 @@ export const links = [
     items: [
       {
         label: "Exchange",
-        href: "https://exchange.pancakeswap.finance",
+        href: "https://dogeshrek.com",
       },
       {
         label: "Liquidity",
-        href: "https://exchange.pancakeswap.finance/#/pool",
+        href: "https://dogeshrek.com/#/pool",
       },
     ],
   },
@@ -119,24 +119,19 @@ export const socials = [
     icon: "TelegramIcon",
     items: [
       {
-        label: "English",
-        href: "https://t.me/cashcowprotocol",
+        label: "TG Chat",
+        href: "https://t.me/dogeshrekchat",
       },
       {
-        label: "English",
-        href: "https://t.me/cashcowprotocol",
+        label: "Channel",
+        href: "https://t.me/dogeshrek",
       },
     ],
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://twitter.com/CashCowProtocol",
-  },
-  {
-    label: "Telegram",
-    icon: "TelegramIcon",
-    href: "https://www.reddit.com/r/GooseFinanceofficial",
+    href: "https://twitter.com/dogeshrek",
   },
 ];
 
