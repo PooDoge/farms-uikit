@@ -79,21 +79,21 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       {cowPriceUsd ? (
-        <PriceLink href={priceLink} target="_blank">
-          <CowRoundIcon width="24px" mr="8px" />
+        <PriceLink href="https://dexscreener.com/dogechain/0xd4f2e4107cc48296d25bc656bf9039fb3f406d79" target="_blank">
+          <CowRoundIcon width="20px" mr="8px" />
           <Text color="textSubtle" bold>{`$${cowPriceUsd.toFixed(6)}`}</Text>
         </PriceLink>
       ) : (
-        <Skeleton width={80} height={24} />
+        <Skeleton width={80} height={20} />
       )}
 
       {cakePriceUsd ? (
-        <PriceLink href={priceLink} target="_blank">
-          <PancakeRoundIcon width="24px" mr="8px" />
+        <PriceLink href="https://dexscreener.com/dogechain/0x647dd9e94ac9b09ef3e3be18c92066cead90cd5c" target="_blank">
+          <PancakeRoundIcon width="20px" mr="8px" />
           <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(6)}`}</Text>
         </PriceLink>
       ) : (
-        <Skeleton width={80} height={24} />
+        <Skeleton width={80} height={20} />
       )}
 
       <SocialEntry>

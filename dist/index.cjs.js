@@ -2361,19 +2361,19 @@ var PriceLink = styled__default['default'].a(templateObject_2$c || (templateObje
 var SettingsEntry = styled__default['default'].div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled__default['default'].div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
 var PanelFooter = function (_a) {
-    var isPushed = _a.isPushed, pushNav = _a.pushNav, toggleTheme = _a.toggleTheme, isDark = _a.isDark, cakePriceUsd = _a.cakePriceUsd, cowPriceUsd = _a.cowPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, priceLink = _a.priceLink;
+    var isPushed = _a.isPushed, pushNav = _a.pushNav, toggleTheme = _a.toggleTheme, isDark = _a.isDark, cakePriceUsd = _a.cakePriceUsd, cowPriceUsd = _a.cowPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang; _a.priceLink;
     if (!isPushed) {
         return (React__default['default'].createElement(Container$4, null,
             React__default['default'].createElement(IconButton, { variant: "text", onClick: function () { return pushNav(true); } },
                 React__default['default'].createElement(Icon$l, null))));
     }
     return (React__default['default'].createElement(Container$4, null,
-        cowPriceUsd ? (React__default['default'].createElement(PriceLink, { href: priceLink, target: "_blank" },
-            React__default['default'].createElement(Icon$v, { width: "24px", mr: "8px" }),
-            React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cowPriceUsd.toFixed(6)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 })),
-        cakePriceUsd ? (React__default['default'].createElement(PriceLink, { href: priceLink, target: "_blank" },
-            React__default['default'].createElement(Icon$w, { width: "24px", mr: "8px" }),
-            React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(6)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 })),
+        cowPriceUsd ? (React__default['default'].createElement(PriceLink, { href: "https://dexscreener.com/dogechain/0xd4f2e4107cc48296d25bc656bf9039fb3f406d79", target: "_blank" },
+            React__default['default'].createElement(Icon$v, { width: "20px", mr: "8px" }),
+            React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cowPriceUsd.toFixed(6)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 20 })),
+        cakePriceUsd ? (React__default['default'].createElement(PriceLink, { href: "https://dexscreener.com/dogechain/0x647dd9e94ac9b09ef3e3be18c92066cead90cd5c", target: "_blank" },
+            React__default['default'].createElement(Icon$w, { width: "20px", mr: "8px" }),
+            React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(6)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 20 })),
         React__default['default'].createElement(SocialEntry, null,
             React__default['default'].createElement(Flex, null, socials.map(function (social, index) {
                 var Icon = Icons$1[social.icon];
