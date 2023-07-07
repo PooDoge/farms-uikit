@@ -12,7 +12,6 @@ import MenuButton from "./MenuButton";
 import * as IconModule from "./icons";
 import { socials, MENU_ENTRY_HEIGHT } from "./config";
 import { PanelProps, PushedProps } from "./types";
-import { Tooltip } from "react-tooltip";
 
 interface Props extends PanelProps, PushedProps { }
 
@@ -81,7 +80,7 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       {bnbPriceUsd ? (
-        <PriceLink href="https://dexscreener.com/dogechain/0x8010d305b0220461ec538da7e12b0b4cbcc2adfe" target="_blank" data-tooltip-id="wdoge-tooltip" data-tooltip-content="WDOGE">
+        <PriceLink href="https://dexscreener.com/dogechain/0x8010d305b0220461ec538da7e12b0b4cbcc2adfe" target="_blank">
           <DogeRoundIcon width="20px" mr="8px" />
           <Text color="textSubtle" bold>{`$${bnbPriceUsd.toFixed(6)}`}</Text>
         </PriceLink>
@@ -90,7 +89,7 @@ const PanelFooter: React.FC<Props> = ({
       )}
 
       {cowPriceUsd ? (
-        <PriceLink href="https://dexscreener.com/dogechain/0xd4f2e4107cc48296d25bc656bf9039fb3f406d79" target="_blank" data-tooltip-id="shrek-tooltip" data-tooltip-content="Dogeshrek">
+        <PriceLink href="https://dexscreener.com/dogechain/0xd4f2e4107cc48296d25bc656bf9039fb3f406d79" target="_blank">
           <CowRoundIcon width="20px" mr="8px" />
           <Text color="textSubtle" bold>{`$${cowPriceUsd.toFixed(6)}`}</Text>
         </PriceLink>
@@ -99,17 +98,13 @@ const PanelFooter: React.FC<Props> = ({
       )}
 
       {cakePriceUsd ? (
-        <PriceLink href="https://dexscreener.com/dogechain/0x647dd9e94ac9b09ef3e3be18c92066cead90cd5c" target="_blank" data-tooltip-id="corn-tooltip" data-tooltip-content="Dogecorn">
+        <PriceLink href="https://dexscreener.com/dogechain/0x647dd9e94ac9b09ef3e3be18c92066cead90cd5c" target="_blank">
           <PancakeRoundIcon width="20px" mr="8px" />
           <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(6)}`}</Text>
         </PriceLink>
       ) : (
         <Skeleton width={80} height={20} />
       )}
-
-      <Tooltip id="wdoge-tooltip" />
-      <Tooltip id="shrek-tooltip" />
-      <Tooltip id="corn-tooltip" />
 
       <SocialEntry>
         <Flex>
