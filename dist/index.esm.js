@@ -6,6 +6,7 @@ import noop from 'lodash/noop';
 import debounce from 'lodash/debounce';
 import throttle from 'lodash/throttle';
 import { Link as Link$1, NavLink, useLocation } from 'react-router-dom';
+import { Tooltip as Tooltip$1 } from 'react-tooltip';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 /*! *****************************************************************************
@@ -2360,15 +2361,18 @@ var PanelFooter = function (_a) {
                 React.createElement(Icon$l, null))));
     }
     return (React.createElement(Container$4, null,
-        bnbPriceUsd ? (React.createElement(PriceLink, { href: "https://dexscreener.com/dogechain/0x8010d305b0220461ec538da7e12b0b4cbcc2adfe", target: "_blank" },
+        bnbPriceUsd ? (React.createElement(PriceLink, { href: "https://dexscreener.com/dogechain/0x8010d305b0220461ec538da7e12b0b4cbcc2adfe", target: "_blank", "data-tooltip-id": "wdoge-tooltip", "data-tooltip-content": "WDOGE" },
             React.createElement(Icon$x, { width: "20px", mr: "8px" }),
             React.createElement(Text, { color: "textSubtle", bold: true }, "$" + bnbPriceUsd.toFixed(6)))) : (React.createElement(Skeleton, { width: 80, height: 20 })),
-        cowPriceUsd ? (React.createElement(PriceLink, { href: "https://dexscreener.com/dogechain/0xd4f2e4107cc48296d25bc656bf9039fb3f406d79", target: "_blank" },
+        cowPriceUsd ? (React.createElement(PriceLink, { href: "https://dexscreener.com/dogechain/0xd4f2e4107cc48296d25bc656bf9039fb3f406d79", target: "_blank", "data-tooltip-id": "shrek-tooltip", "data-tooltip-content": "Dogeshrek" },
             React.createElement(Icon$v, { width: "20px", mr: "8px" }),
             React.createElement(Text, { color: "textSubtle", bold: true }, "$" + cowPriceUsd.toFixed(6)))) : (React.createElement(Skeleton, { width: 80, height: 20 })),
-        cakePriceUsd ? (React.createElement(PriceLink, { href: "https://dexscreener.com/dogechain/0x647dd9e94ac9b09ef3e3be18c92066cead90cd5c", target: "_blank" },
+        cakePriceUsd ? (React.createElement(PriceLink, { href: "https://dexscreener.com/dogechain/0x647dd9e94ac9b09ef3e3be18c92066cead90cd5c", target: "_blank", "data-tooltip-id": "corn-tooltip", "data-tooltip-content": "Dogecorn" },
             React.createElement(Icon$w, { width: "20px", mr: "8px" }),
             React.createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(6)))) : (React.createElement(Skeleton, { width: 80, height: 20 })),
+        React.createElement(Tooltip$1, { id: "wdoge-tooltip" }),
+        React.createElement(Tooltip$1, { id: "shrek-tooltip" }),
+        React.createElement(Tooltip$1, { id: "corn-tooltip" }),
         React.createElement(SocialEntry, null,
             React.createElement(Flex, null, socials.map(function (social, index) {
                 var Icon = Icons$1[social.icon];

@@ -10,6 +10,7 @@ var noop = require('lodash/noop');
 var debounce = require('lodash/debounce');
 var throttle = require('lodash/throttle');
 var reactRouterDom = require('react-router-dom');
+var reactTooltip = require('react-tooltip');
 var reactTransitionGroup = require('react-transition-group');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
@@ -2373,15 +2374,18 @@ var PanelFooter = function (_a) {
                 React__default['default'].createElement(Icon$l, null))));
     }
     return (React__default['default'].createElement(Container$4, null,
-        bnbPriceUsd ? (React__default['default'].createElement(PriceLink, { href: "https://dexscreener.com/dogechain/0x8010d305b0220461ec538da7e12b0b4cbcc2adfe", target: "_blank" },
+        bnbPriceUsd ? (React__default['default'].createElement(PriceLink, { href: "https://dexscreener.com/dogechain/0x8010d305b0220461ec538da7e12b0b4cbcc2adfe", target: "_blank", "data-tooltip-id": "wdoge-tooltip", "data-tooltip-content": "WDOGE" },
             React__default['default'].createElement(Icon$x, { width: "20px", mr: "8px" }),
             React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + bnbPriceUsd.toFixed(6)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 20 })),
-        cowPriceUsd ? (React__default['default'].createElement(PriceLink, { href: "https://dexscreener.com/dogechain/0xd4f2e4107cc48296d25bc656bf9039fb3f406d79", target: "_blank" },
+        cowPriceUsd ? (React__default['default'].createElement(PriceLink, { href: "https://dexscreener.com/dogechain/0xd4f2e4107cc48296d25bc656bf9039fb3f406d79", target: "_blank", "data-tooltip-id": "shrek-tooltip", "data-tooltip-content": "Dogeshrek" },
             React__default['default'].createElement(Icon$v, { width: "20px", mr: "8px" }),
             React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cowPriceUsd.toFixed(6)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 20 })),
-        cakePriceUsd ? (React__default['default'].createElement(PriceLink, { href: "https://dexscreener.com/dogechain/0x647dd9e94ac9b09ef3e3be18c92066cead90cd5c", target: "_blank" },
+        cakePriceUsd ? (React__default['default'].createElement(PriceLink, { href: "https://dexscreener.com/dogechain/0x647dd9e94ac9b09ef3e3be18c92066cead90cd5c", target: "_blank", "data-tooltip-id": "corn-tooltip", "data-tooltip-content": "Dogecorn" },
             React__default['default'].createElement(Icon$w, { width: "20px", mr: "8px" }),
             React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(6)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 20 })),
+        React__default['default'].createElement(reactTooltip.Tooltip, { id: "wdoge-tooltip" }),
+        React__default['default'].createElement(reactTooltip.Tooltip, { id: "shrek-tooltip" }),
+        React__default['default'].createElement(reactTooltip.Tooltip, { id: "corn-tooltip" }),
         React__default['default'].createElement(SocialEntry, null,
             React__default['default'].createElement(Flex, null, socials.map(function (social, index) {
                 var Icon = Icons$1[social.icon];
