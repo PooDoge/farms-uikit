@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { PancakeRoundIcon, CogIcon, SvgProps, CowRoundIcon } from "../../components/Svg";
+import { PancakeRoundIcon, CogIcon, SvgProps, CowRoundIcon, DogeRoundIcon } from "../../components/Svg";
 import Text from "../../components/Text/Text";
 import Flex from "../../components/Flex/Flex";
 import Dropdown from "../../components/Dropdown/Dropdown";
@@ -61,6 +61,7 @@ const PanelFooter: React.FC<Props> = ({
   isDark,
   cakePriceUsd,
   cowPriceUsd,
+  bnbPriceUsd,
   currentLang,
   langs,
   setLang,
@@ -78,6 +79,15 @@ const PanelFooter: React.FC<Props> = ({
 
   return (
     <Container>
+      {bnbPriceUsd ? (
+        <PriceLink href="https://dexscreener.com/dogechain/0x8010d305b0220461ec538da7e12b0b4cbcc2adfe" target="_blank">
+          <DogeRoundIcon width="20px" mr="8px" />
+          <Text color="textSubtle" bold>{`$${bnbPriceUsd.toFixed(6)}`}</Text>
+        </PriceLink>
+      ) : (
+        <Skeleton width={80} height={20} />
+      )}
+
       {cowPriceUsd ? (
         <PriceLink href="https://dexscreener.com/dogechain/0xd4f2e4107cc48296d25bc656bf9039fb3f406d79" target="_blank">
           <CowRoundIcon width="20px" mr="8px" />
